@@ -1,0 +1,244 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D9F38C85-7900-4D0C-840D-FBA12F6F3432}</ProjectGuid>
+        <MainSource>logix.dpr</MainSource>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <ProjectVersion>18.4</ProjectVersion>
+        <Base>True</Base>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>logix</SanitizedProjectName>
+        <VerInfo_Build>157</VerInfo_Build>
+        <VerInfo_Debug>true</VerInfo_Debug>
+        <VerInfo_Keys>CompanyName=softland;FileDescription=LAS file tools;FileVersion=1.2.1.157;InternalName=logix;LegalCopyright=softlandia@gmail.com;LegalTrademarks=softlandia@gmail.com;OriginalFilename=logix;ProductName=LAS tools;ProductVersion=1.1.0.151;Comments=softlandia@gmail.com</VerInfo_Keys>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_MinorVer>2</VerInfo_MinorVer>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1049</VerInfo_Locale>
+        <VerInfo_Release>1</VerInfo_Release>
+        <DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+        <DCC_UsePackage>Vcl50;Vclx50;VclSmp50;Vcldb50;vclado50;ibevnt50;Vclbde50;vcldbx50;Qrpt50;TeeUI50;TeeDB50;Tee50;Dss50;TeeQR50;VCLIB50;dclocx50;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+        <DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_DependencyCheckOutputName>logix.exe</DCC_DependencyCheckOutputName>
+        <DCC_Platform>x86</DCC_Platform>
+        <DCC_WriteableConstants>true</DCC_WriteableConstants>
+        <DCC_K>false</DCC_K>
+        <DCC_F>false</DCC_F>
+        <DCC_S>false</DCC_S>
+        <DCC_N>true</DCC_N>
+        <DCC_E>false</DCC_E>
+        <DebugSourcePath>C:\Program Files\Borland\Delphi7\Demos\ShellControls\;$(DebugSourcePath)</DebugSourcePath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <Icon_MainIcon>logix_Icon1.ico</Icon_MainIcon>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Icon_MainIcon>logix_Icon1.ico</Icon_MainIcon>
+        <Manifest_File>None</Manifest_File>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Keys>CompanyName=softlandia@gmail.com;FileVersion=0.1.1.2;InternalName=logix;LegalCopyright=;LegalTrademarks=;OriginalFilename=logix;ProductVersion=0.1.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
+        <VerInfo_Build>2</VerInfo_Build>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_PreRelease>true</VerInfo_PreRelease>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_AutoGenVersion>false</VerInfo_AutoGenVersion>
+        <VerInfo_MajorVer>0</VerInfo_MajorVer>
+        <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="main.pas"/>
+        <DCCReference Include="common.pas"/>
+        <DCCReference Include="AddLogAliace.pas">
+            <Form>frmAddNewLOGaliace</Form>
+        </DCCReference>
+        <DCCReference Include="AddLAS.pas">
+            <Form>frmAddLAS</Form>
+        </DCCReference>
+        <DCCReference Include="APIcode.pas">
+            <Form>frmAPIcode</Form>
+        </DCCReference>
+        <DCCReference Include="BaseDlg.pas">
+            <Form>frmBaseDlg</Form>
+        </DCCReference>
+        <DCCReference Include="browser.pas">
+            <Form>frmBrowser</Form>
+        </DCCReference>
+        <DCCReference Include="CreateLas.pas">
+            <Form>frmCreateLAS</Form>
+        </DCCReference>
+        <DCCReference Include="ChartHeaderInfo.pas">
+            <Form>frmChartHeaderInfo</Form>
+        </DCCReference>
+        <DCCReference Include="ChartPref.pas">
+            <Form>frmChartPref</Form>
+        </DCCReference>
+        <DCCReference Include="ChartExport.pas">
+            <Form>frmChartExport</Form>
+        </DCCReference>
+        <DCCReference Include="ChangeLOGid.pas">
+            <Form>frmChangeLogId</Form>
+        </DCCReference>
+        <DCCReference Include="EditLOGid.pas">
+            <Form>frmEditLOGid</Form>
+        </DCCReference>
+        <DCCReference Include="EditLASParams.pas">
+            <Form>frmEditLASParams</Form>
+        </DCCReference>
+        <DCCReference Include="JoinLAS.pas">
+            <Form>frmJoinLAS</Form>
+        </DCCReference>
+        <DCCReference Include="LASView.pas">
+            <Form>fraLASView</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="LOGChart.pas">
+            <Form>frmLogChart</Form>
+        </DCCReference>
+        <DCCReference Include="LogList.pas">
+            <Form>frmLogList</Form>
+        </DCCReference>
+        <DCCReference Include="preferences.pas">
+            <Form>frmPreferences</Form>
+        </DCCReference>
+        <DCCReference Include="Replace.pas">
+            <Form>frmReplace</Form>
+        </DCCReference>
+        <DCCReference Include="ViewSheet.pas">
+            <Form>frmViewSheet</Form>
+        </DCCReference>
+        <DCCReference Include="ViewXYZfile.pas">
+            <Form>frmViewXYZfile</Form>
+        </DCCReference>
+        <DCCReference Include="X:\lib\xLib\CLAS.pas"/>
+        <DCCReference Include="X:\lib\xLib\AScript.pas"/>
+        <DCCReference Include="X:\lib\xLib\biStrList.pas"/>
+        <DCCReference Include="X:\lib\xLib\floatlist.pas"/>
+        <DCCReference Include="X:\lib\xLib\LOGRecList.pas"/>
+        <DCCReference Include="X:\lib\xLib\Painter.pas"/>
+        <DCCReference Include="X:\lib\xLib\PainterBox.pas"/>
+        <DCCReference Include="X:\lib\xLib\xGraf.pas"/>
+        <DCCReference Include="X:\lib\xLib\xSeries.pas"/>
+        <DCCReference Include="X:\lib\ShellControls\ShellCtrls.pas"/>
+        <DCCReference Include="AboutBox.pas">
+            <Form>frmAboutBox</Form>
+        </DCCReference>
+        <None Include="logix.todo"/>
+        <None Include="ModelSupport_logix\default.txaPackage"/>
+        <None Include="ModelSupport_logix\default.txvpck"/>
+        <None Include="ModelSupport_logix\cLas\default.txvpck"/>
+        <None Include="ModelSupport_logix\logix\default.txvpck"/>
+        <None Include="ModelSupport_logix\cLas\default.txaPackage"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">logix.dpr</Source>
+                </Source>
+                <Parameters/>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">True</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">2</VersionInfo>
+                    <VersionInfo Name="Release">1</VersionInfo>
+                    <VersionInfo Name="Build">163</VersionInfo>
+                    <VersionInfo Name="Debug">True</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1049</VersionInfo>
+                    <VersionInfo Name="CodePage">1251</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">softland</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">LAS file tools</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">1.2.1.163</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName">logix</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalCopyright">softlandia@gmail.com</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks">softlandia@gmail.com</VersionInfoKeys>
+                    <VersionInfoKeys Name="OriginalFilename">logix</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">LAS tools</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">1.1.0.151</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments">softlandia@gmail.com</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+            </Platforms>
+            <ModelSupport>True</ModelSupport>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+</Project>
